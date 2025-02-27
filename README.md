@@ -29,8 +29,8 @@ lib/
 │
 ├── screens/                       # Screen pages
 │   ├── todo_screen                # Contains the main UI
-│   ├── widget/                    # Reusable UI components
-│       ├── animated_task_item     # Contains sliding animation
+│   └── widget/                    # Reusable UI components
+│       └── animated_task_item     # Contains sliding animation
 │
 └── main.dart                      # Application entry point
 ```
