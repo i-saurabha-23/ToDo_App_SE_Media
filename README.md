@@ -25,7 +25,7 @@ lib/
 │   └── todo_state                 # Defines states (Task List, Updated List).
 │
 ├── models/                        # Contains the task mod
-│   ├── task_model                 # Defines a Task model.
+│   └── task_model                 # Defines a Task model.
 │
 ├── screens/                       # Screen pages
 │   ├── todo_screen                # Contains the main UI
