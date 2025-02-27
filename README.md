@@ -9,7 +9,6 @@ A beautifully designed task management application built with Flutter using Clea
 - 🔄 Swipe to mark tasks as complete or remove them
 - 🗑️ Easily clear all completed tasks
 - 💾 Persistent local storage using SharedPreferences
-- 📱 Beautiful splash screen with fluid animations
 - 🏗️ Built with Clean Architecture for maintainability and testability
 
 ## Architecture
