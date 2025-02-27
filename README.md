@@ -2,8 +2,6 @@
 
 A beautifully designed task management application built with Flutter using Clean Architecture principles and a Facebook-inspired UI.
 
-![App Screenshot](https://raw.githubusercontent.com/your-username/your-repo-name/main/screenshots/app_preview.png)
-
 ## Features
 
 - ✅ Create, complete, and remove tasks with smooth animations
@@ -21,35 +19,26 @@ This project follows Clean Architecture principles to separate concerns and make
 ```
 lib/
 │
-├── core/             # Core functionality and utilities
-│   ├── constants/    # App-wide constants and theme
-│   ├── errors/       # Error handling
-│   └── usecases/     # Base usecase definitions
+├── blocs/                         # BLoC state management
+│   ├── todo_bloc                  # Manages state using Bloc.
+│   ├── todo_events                # Defines user actions (Add, Complete, Remove Task).
+│   └── todo_state                 # Defines states (Task List, Updated List).
 │
-├── data/             # Data layer
-│   ├── datasources/  # Data sources (local/remote)
-│   ├── models/       # Data models
-│   └── repositories/ # Repository implementations
+├── models/                        # Contains the task mod
+│   ├── task_model                 # Defines a Task model.
 │
-├── domain/           # Domain layer (business logic)
-│   ├── entities/     # Business entities
-│   ├── repositories/ # Repository interfaces
-│   └── usecases/     # Business logic use cases
+├── screens/                       # Screen pages
+│   ├── todo_screen                # Contains the main UI
+│   ├── widget/                    # Reusable UI components
+│       ├── animated_task_item     # Contains sliding animation
 │
-├── presentation/     # Presentation layer
-│   ├── bloc/         # BLoC state management
-│   ├── pages/        # Screen pages
-│   └── widgets/      # Reusable UI components
-│
-└── main.dart         # Application entry point
+└── main.dart                      # Application entry point
 ```
 
 ## Technologies Used
 
 - **Flutter**: UI framework
 - **BLoC Pattern**: State management
-- **Get_it**: Dependency injection
-- **Dartz**: Functional programming
 - **SharedPreferences**: Local data persistence
 - **Equatable**: Value equality
 
@@ -59,12 +48,12 @@ lib/
 
 2. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+   git clone https://github.com/i-saurabha-23/ToDo_App_SE_Media
    ```
 
 3. Navigate to the project directory:
    ```bash
-   cd your-repo-name
+   cd ToDo_App_SE_Media
    ```
 
 4. Get dependencies:
@@ -81,14 +70,13 @@ lib/
 
 <table>
   <tr>
-    <td><img src="https://raw.githubusercontent.com/your-username/your-repo-name/main/screenshots/splash_screen.png" width="200"/></td>
-    <td><img src="https://raw.githubusercontent.com/your-username/your-repo-name/main/screenshots/empty_state.png" width="200"/></td>
-    <td><img src="https://raw.githubusercontent.com/your-username/your-repo-name/main/screenshots/task_list.png" width="200"/></td>
+    <td><img src="./screenshots/mainPage.jpg" width="200"/></td>
+    <td><img src="./screenshots/addTask1.jpg" width="200"/></td>
+    <td><img src="./screenshots/addTask2.jpg" width="200"/></td>
   </tr>
   <tr>
-    <td><img src="https://raw.githubusercontent.com/your-username/your-repo-name/main/screenshots/add_task.png" width="200"/></td>
-    <td><img src="https://raw.githubusercontent.com/your-username/your-repo-name/main/screenshots/completed_tasks.png" width="200"/></td>
-    <td><img src="https://raw.githubusercontent.com/your-username/your-repo-name/main/screenshots/clear_tasks.png" width="200"/></td>
+    <td><img src="./screenshots/clearTask.jpg" width="200"/></td>
+    <td><img src="./screenshots/completedTask.jpg" width="200"/></td>
   </tr>
 </table>
 
@@ -101,34 +89,6 @@ The UI is inspired by Facebook's clean and intuitive design language, featuring:
 - Bottom sheet for adding tasks
 - Dismissible task cards with swipe gestures
 - Smooth transitions and animations
-
-## Project Structure
-
-### Core Layer
-Contains application-wide utilities, constants, error handling, and base classes.
-
-### Domain Layer
-Houses the business logic of the application, including entities, repository interfaces and use cases.
-
-### Data Layer
-Manages data operations and external services, containing repository implementations, models and data sources.
-
-### Presentation Layer
-Handles UI components, state management, and user interactions.
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgments
 
